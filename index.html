@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+  const tg = window.Telegram.WebApp;
+
+  // اعلام آماده بودن اپ
+  tg.ready();
+
+  // اگر میخوای تمام صفحه بشه
+  tg.expand();
+
+  // نمونه گرفتن اطلاعات کاربر
+  const user = tg.initDataUnsafe?.user;
+  console.log(user);
+
+  // تغییر رنگ هدر (اختیاری)
+  tg.setHeaderColor("#121212");
+</script>
     <title>2048 Game</title>
 </head>
 <body>
 
     <div class="title-container">
-        <h1 class="title">🏳️‍🌈2048 Game 🏳️‍🌈</h1>
+        <h1 class="title">2048 Game </h1>
     </div>
     
     <div class="score-container">
